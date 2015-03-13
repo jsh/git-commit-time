@@ -1,2 +1,2 @@
 # git-commit-time
-Change file mod times to last commit
+Change file mod times to last commit.
