@@ -1,0 +1,8 @@
+#!/bin/bash -eux
+
+find . -type f |
+fgrep -v .git  |
+while read i; do
+  date="$( git log -1 --format=%ci -- $i)"
+  [ "$date" ] && touch --date="$date" $i
+done
